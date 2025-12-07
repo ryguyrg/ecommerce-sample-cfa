@@ -9,33 +9,52 @@ export default function LoginPage() {
       justifyContent: 'center',
       alignItems: 'center',
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      background: '#F4EFEA',
     }}>
       <div style={{
-        background: 'white',
+        background: '#FFFFFF',
         padding: '48px',
-        borderRadius: '16px',
-        boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3)',
+        border: '2px solid #383838',
+        borderRadius: '2px',
+        boxShadow: '-8px 8px 0px 0px #383838',
         textAlign: 'center',
         maxWidth: '400px',
       }}>
-        <h1 style={{ marginBottom: '16px', color: '#1a202c' }}>
+        <div style={{ fontSize: '48px', marginBottom: '16px' }}>🦆</div>
+        <h1 style={{ marginBottom: '8px', color: '#383838', fontSize: '1.75rem' }}>
           Analytics Dashboard
         </h1>
-        <p style={{ color: '#718096', marginBottom: '32px' }}>
+        <p style={{ color: '#A1A1A1', marginBottom: '32px' }}>
           Sign in with your Google account to access your store analytics
         </p>
         <button
           onClick={() => signIn('google', { callbackUrl: '/stores' })}
-          className="btn btn-primary"
           style={{
             width: '100%',
             padding: '14px 24px',
             fontSize: '16px',
+            fontWeight: 600,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             gap: '12px',
+            background: '#FFDE00',
+            color: '#383838',
+            border: '2px solid #383838',
+            borderRadius: '2px',
+            boxShadow: 'none',
+            cursor: 'pointer',
+            transition: 'all 150ms ease-in-out',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = '#6FC2FF';
+            e.currentTarget.style.transform = 'translate(2px, -2px)';
+            e.currentTarget.style.boxShadow = '-5px 5px 0px 0px #383838';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = '#FFDE00';
+            e.currentTarget.style.transform = 'translate(0, 0)';
+            e.currentTarget.style.boxShadow = 'none';
           }}
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -58,6 +77,13 @@ export default function LoginPage() {
           </svg>
           Sign in with Google
         </button>
+        <p style={{
+          marginTop: '24px',
+          fontSize: '0.85rem',
+          color: '#A1A1A1'
+        }}>
+          Powered by MotherDuck
+        </p>
       </div>
     </div>
   );

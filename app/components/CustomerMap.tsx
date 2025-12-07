@@ -43,10 +43,10 @@ export default function CustomerMap({ data }: CustomerMapProps) {
                 key={index}
                 center={[location.lat, location.lng]}
                 radius={radius}
-                fillColor="#667eea"
-                color="#4c51bf"
+                fillColor="#FFDE00"
+                color="#383838"
                 weight={2}
-                fillOpacity={0.6}
+                fillOpacity={0.8}
               >
                 <Popup>
                   <div>

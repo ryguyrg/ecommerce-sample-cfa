@@ -18,29 +18,31 @@ export default function OrdersChart({ data }: OrdersChartProps) {
       <h3>Orders Over Time (Last 90 Days)</h3>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={formattedData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#A1A1A1" />
           <XAxis
             dataKey="date"
             tick={{ fontSize: 12 }}
-            stroke="#718096"
+            stroke="#383838"
           />
           <YAxis
             tick={{ fontSize: 12 }}
-            stroke="#718096"
+            stroke="#383838"
           />
           <Tooltip
             contentStyle={{
-              background: 'white',
-              border: '1px solid #e0e0e0',
-              borderRadius: '4px',
+              background: '#FFFFFF',
+              border: '2px solid #383838',
+              borderRadius: '2px',
             }}
           />
           <Legend />
           <Bar
             dataKey="orders"
             name="Orders"
-            fill="#764ba2"
-            radius={[4, 4, 0, 0]}
+            fill="#FFDE00"
+            stroke="#383838"
+            strokeWidth={1}
+            radius={[2, 2, 0, 0]}
           />
         </BarChart>
       </ResponsiveContainer>

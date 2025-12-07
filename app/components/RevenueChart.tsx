@@ -18,23 +18,23 @@ export default function RevenueChart({ data }: RevenueChartProps) {
       <h3>Revenue Over Time (Last 90 Days)</h3>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={formattedData}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#A1A1A1" />
           <XAxis
             dataKey="date"
             tick={{ fontSize: 12 }}
-            stroke="#718096"
+            stroke="#383838"
           />
           <YAxis
             tick={{ fontSize: 12 }}
-            stroke="#718096"
+            stroke="#383838"
             tickFormatter={(value) => `$${value.toLocaleString()}`}
           />
           <Tooltip
             formatter={(value: number) => `$${value.toLocaleString()}`}
             contentStyle={{
-              background: 'white',
-              border: '1px solid #e0e0e0',
-              borderRadius: '4px',
+              background: '#FFFFFF',
+              border: '2px solid #383838',
+              borderRadius: '2px',
             }}
           />
           <Legend />
@@ -42,10 +42,10 @@ export default function RevenueChart({ data }: RevenueChartProps) {
             type="monotone"
             dataKey="revenue"
             name="Revenue"
-            stroke="#667eea"
+            stroke="#2BA5FF"
             strokeWidth={2}
-            dot={{ fill: '#667eea', r: 4 }}
-            activeDot={{ r: 6 }}
+            dot={{ fill: '#2BA5FF', r: 4 }}
+            activeDot={{ r: 6, fill: '#FFDE00', stroke: '#383838', strokeWidth: 2 }}
           />
         </LineChart>
       </ResponsiveContainer>
